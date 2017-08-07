@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">微Q变声器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="helpmessage">在主界面录制好语音后选择你要变音的参数(界面中对应的图标)，
+        然后点击变音(界面底部中间的按钮)按钮，提示变音成功后就可以按播放按钮试听变音了，如果要发送变音的话，
+按返回键或者“home”键将应用退到后台，打开微信或者qq等要发送语音的聊天软件，切换到通知栏点击播放按钮，然后回到qq或者微信的语音发送
+界面按住发送语音的按钮，你的变音就能够让微信或者qq听见，松开的时候就可以发送给对方啦！</string>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+	    <SeekBar 
+		    android:id="@+id/tempoSeekBar" 
+		    android:layout_width="240dp" 
+			android:max="50" 
+			android:progress="0" 
+			android:layout_height="wrap_content"
+			android:minHeight="20dp"
+			android:maxWidth="20dp"
+			></SeekBar>
+	    <TextView  
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textColor="#FF0000"
+			android:text="节拍 "
+			></TextView>
+		<TextView  
+		    android:id="@+id/TextView01" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textColor="#FF0000"
+			android:text=""
+			></TextView>
+	</LinearLayout>
+	
+     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+	    <SeekBar 
+		    android:id="@+id/pitchSeekBar" 
+		    android:layout_width="240dp" 
+			android:max="50" 
+			android:progress="10" 
+			android:layout_height="wrap_content"></SeekBar>
+	    <TextView  
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textColor="#FF0000"
+			android:text="频率 "
+			></TextView>
+		<TextView  
+		    android:id="@+id/TextView02" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textColor="#FF0000"
+			android:text=""
+			></TextView>
+	</LinearLayout>
+	
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+	    <SeekBar 
+		    android:id="@+id/rateSeekBar" 
+		    android:layout_width="240dp" 
+			android:max="50" 
+			android:progress="20" 
+			
+			android:layout_height="wrap_content"></SeekBar>
+	    <TextView  
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textColor="#FF0000"
+			android:text="语速 "
+			></TextView>
+		<TextView  
+		    android:id="@+id/TextView03" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:textColor="#FF0000"
+			android:text=""
+			></TextView>
+	</LinearLayout>
+
+</LinearLayout>

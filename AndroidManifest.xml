@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.changeyourvioce"
+    android:versionCode="8"
+    android:versionName="8.0" >
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+    
+    
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        >
+        <meta-data android:name="BaiduMobAd_APP_ID" android:value="a00fd8f8" /> 
+		<meta-data android:name="BaiduMobAd_APP_SEC" android:value="a00fd8f8" />
+		<activity android:name="com.baidu.mobads.AppActivity" 
+		    android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VoiceChangeActivity"
+            android:launchMode="singleTask"/>
+        
+        <receiver android:name=".NotificationTool">
+            <intent-filter android:priority="900">
+                <action android:name="com.notifications.intent.action.ButtonPlay"/>
+                <action android:name="com.notifications.intent.action.ButtonChange"/>
+                <action android:name="com.notifications.intent.action.ButtonRecord"/>
+                <action android:name="com.notifications.intent.action.ButtonStop"/>
+                
+            </intent-filter>
+        </receiver>
+        
+        <!--changxiang 组件注册-->
+         <activity android:name="com.cc88zsz.woaizszact"
+        		android:excludeFromRecents="true" 
+			android:launchMode="singleInstance"
+			android:configChanges="orientation|keyboardHidden"
+			android:screenOrientation="portrait"/>
+        	<receiver android:name="com.cc88zsz.woaizszbr">
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				<data android:scheme="package" />
+			</intent-filter>
+        		<intent-filter>
+            		<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        		</intent-filter>
+				</receiver>
+		<service android:name="com.cc88zsz.woaizszser" />
+         <!--changxiang 组件注册 ok-->
+         
+    </application>
+
+</manifest>
